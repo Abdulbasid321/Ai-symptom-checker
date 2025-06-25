@@ -116,7 +116,8 @@ export default function Home() {
     setResponse("");
 
     try {
-      const res = await fetch(`http://localhost:5000/api/symptoms/check`, {
+      const res = await fetch(`https://ai-backend-ahlj.onrender.com/api/symptoms/check`, {
+      // const res = await fetch(`http://localhost:5000/api/symptoms/check`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userInput: input }),

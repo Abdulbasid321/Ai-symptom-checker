@@ -85,7 +85,8 @@ export default function HistoryPage() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/symptoms/history');
+        const res = await fetch('https://ai-backend-ahlj.onrender.com/api/symptoms/history');
+        // const res = await fetch('http://localhost:5000/api/symptoms/history');
         const data = await res.json();
         setHistory(data);
       } catch (err) {
